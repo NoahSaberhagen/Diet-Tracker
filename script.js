@@ -6,22 +6,23 @@ const carbohydrateInput = document.getElementById('carbohydrate');
 const sugarInput = document.getElementById('sugar');
 const fatInput = document.getElementById('fat');
 
-// date variables
-const date = new Date();
-const today = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
-
 // 'mealEntryNumber: currentMeal' to localStorage
-const submit = document.getElementById('submit');
-submit.addEventListener('click', () => {
-    let currentMeal = {
-        dateOfEntry: today,
-        calories: calorieInput.value,
-        protein: proteinInput.value,
-        carbohydrates: carbohydrateInput.value,
-        sugar: sugarInput.value,
-        fat: fatInput.value    
-    };
-    let mealEntryNumber = Object.keys(localStorage).length + 1;
-    window.localStorage.setItem(JSON.stringify(mealEntryNumber), JSON.stringify(currentMeal));
-    console.log(mealEntryNumber);
+const form = document.querySelector('.form');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const currentMeal = {}    
+    const mealTimeStamp = Date.now();
+    const formElements = Array.from(e.target.elements);
+    formElements.forEach((input, idx) => {
+        if (idx !== formElements.length - 1){
+            currentMeal[input.name] = Number(input.value)
+        };
+        input.value = idx === formElements.length - 1 ? "Submit" : "";
+    });
+    window.localStorage.setItem(mealTimeStamp, JSON.stringify(currentMeal));
 });
+
+//search meals
+// for(let i = 0; i <= Object.keys(localStorage).length; i++){
+    
+// }
