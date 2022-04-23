@@ -1,0 +1,22 @@
+{
+  "name": "diet-tracker",
+  "version": "0.1.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahSaberhagen/Diet-Tracker.git"
+  },
+  "author": "Noah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoahSaberhagen/Diet-Tracker/issues"
+  },
+  "homepage": "https://github.com/NoahSaberhagen/Diet-Tracker#readme",
+  "devDependencies": {
+  }
+}
