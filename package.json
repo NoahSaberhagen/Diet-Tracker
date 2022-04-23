@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "diet-tracker",
   "version": "0.1.0",
   "description": "",
@@ -17,6 +18,11 @@
     "url": "https://github.com/NoahSaberhagen/Diet-Tracker/issues"
   },
   "homepage": "https://github.com/NoahSaberhagen/Diet-Tracker#readme",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  },
   "devDependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
+    "typescript": "^4.7.0-dev.20220423"
   }
 }
